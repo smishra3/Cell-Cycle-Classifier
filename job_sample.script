@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#SBATCH --job-name=PCNA_max_masked_im0lb0_classification
+#SBATCH --partition aics_gpu_general
+#SBATCH --gres gpu:v100:1
+#SBATCH --mem 60G
+#SBATCH --output /allen/aics/assay-dev/users/Suraj/PCNA_Classification/Exp_max_masked_im0lb0/test.out
+
+srun /allen/aics/apps/prod/venvs/aics-batch/v0.0.x/bin/python /allen/aics/assay-dev/users/Suraj/PCNA_Classification/Exp_max_masked_im0lb0/pcna_vgg.py 01
+
+

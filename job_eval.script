@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#SBATCH --job-name=PCNA_maxmaskedim0lb0_classification_eval
+#SBATCH --partition aics_gpu_general
+#SBATCH --gres gpu:v100:1
+#SBATCH --mem 60G
+#SBATCH --output /allen/aics/assay-dev/users/Suraj/PCNA_Classification/Exp_max_masked_im0lb0/test_eval.out
+
+srun sh /allen/aics/assay-dev/users/Suraj/PCNA_Classification/Exp_max_masked_im0lb0/auto_test.sh
